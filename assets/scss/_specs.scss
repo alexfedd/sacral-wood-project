@@ -1,0 +1,122 @@
+.specs {
+  background: #0e0e0e;
+  padding: 72px 0 102px;
+  @media (max-width: 1023px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
+  &__container {
+  }
+
+  &__tabs {
+    margin-top: 67px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: 1023px) {
+        margin-top: 50px;
+    }
+    @media (max-width: 767px) {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        border-bottom: none;
+    }
+    & > li {
+      flex: 1 1 auto;
+      @media (max-width: 767px) {
+        flex: 0 1 50%;
+      }
+      @media (max-width: 424px) {
+        flex: 0 1 100%;
+      }
+    }
+  }
+
+  &__tab {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat-bold";
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0px;
+
+    @media (hover: hover) {
+      &:hover {
+        background: none !important;
+        color: rgb(164, 116, 73);
+        border-color: transparent !important;
+        border-bottom: 1px solid rgb(164, 116, 73) !important;
+      }
+    }
+    &[aria-selected="true"] {
+      color: rgb(164, 116, 73);
+      border: none;
+      background-color: transparent;
+      @media (min-width: 768px) {
+        border-bottom: 1px solid rgb(164, 116, 73);
+      }
+    }
+    &[role=tab] {
+        border-top-color: transparent;
+    }
+
+  }
+
+  &__info {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0 20px;
+    @media (max-width: 767px) {
+        flex-direction: column;
+        margin-top: 30px;
+        padding: 0;
+    }
+    &[hidden="hidden"] {
+        display: none;
+    }
+  }
+
+  &__content {
+    flex: 0 1 468px;
+    @media (max-width: 767px) {
+        flex: none;
+    }
+  }
+
+  &__title {
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__list-item {
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat-medium';
+    font-size: 16px;
+    line-height: 131%;
+    text-align: left;
+    list-style: disc;
+    list-style-position: inside;
+    & + & {
+        margin-top: 7px;
+    }
+  }
+
+  &__image {
+    flex: 0 1 538px;
+    @media (max-width: 767px) {
+        margin-top: 20px;
+        flex: none;
+    }
+  }
+}
+
